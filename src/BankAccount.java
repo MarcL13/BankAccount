@@ -12,15 +12,18 @@ public class BankAccount
 	
 	
 	
-	public BankAccount(String name, int accNum)
-	{
-		name = "Marc Lussier";
-		accNum=1;
+	public BankAccount(String n, int aN)
+	{ 
+		name = n;
+		accNum = aN;
+		balance = 0;
 	}
 	
-	public BankAccount(double balance)
+	public BankAccount(String n, int aN, double b)
 	{
-		balance = 0;
+		balance = b;
+		name= n;
+		accNum = aN;				
 	}
 	
 	public void deposit(double amount1)
@@ -42,8 +45,6 @@ public class BankAccount
 	
 	public String toString()
 	{
-		return name;
-		return accNum;
-		return balance;
+		return "name: " + name + "\t balance: " + balance + "\taccNum: " + accNum;
 	}
 }
